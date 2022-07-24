@@ -1,17 +1,16 @@
-const getMood = () => {
-	const moods = ['Happy', "Silly", "Angry", "Extatic", "loveStruck"];
-	return moods[Math.floor(Math.random() * moods.length)];
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+
+class App extends React.Component {
+  render() {
+		return(
+    <div>
+      <Hello />
+			<JSXDemo />
+    </div>
+		)
+  }
 }
 
-
-class JSXDemo extends React.Component {
-	render() {
-		return (
-			<div>
-				<h1>My current mood is: {getMood()}</h1>
-			</div>
-		);
-	}
-}
-
-ReactDOM.render(<JSXDemo />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
